@@ -6,9 +6,25 @@
   <link rel="stylesheet" href="css/styles.css" media="screen" title="no title" charset="utf-8">
   <script src="js/jquery-3.1.1.js" charset="utf-8"></script>
   <script src="js/scripts.js" charset="utf-8"></script>
-  <title>Count Up By</title>
+  <title>Make a deck</title>
 </head>
 <body>
-
+  <div class="container">
+    <p>Here is a full deck. Choose your type</p>
+    <form>
+    <select class="form-control" id="card-type">
+      <option value="all-suits">All Suits</option>
+      <option value="diamonds">Diamonds</option>
+      <option value="hearts">Hearts</option>
+      <option value="spades">Spades</option>
+      <option value="clubs">Clubs</option>
+    </select>
+    <button type="submit" id="submit-button" class="btn btn-danger btn-large">Submit</button>
+  </form>
+  <div>
+    <ul id="result">
+    </ul>
+  </div>
+  </div>
 </body>
 </html>
