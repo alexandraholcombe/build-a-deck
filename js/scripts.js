@@ -8,37 +8,35 @@ $(document).ready(function() {
 
   $("form").submit(function(event) {
     event.preventDefault();
-    // forEach loop
-    // numbers.forEach(function(number){
-    //   $("ul#result").append("<li>" + number + cards[0] + "</li>")
-    // });
-    // numbers.forEach(function(number){
-    //   $("ul#result").append("<li>" + number + cards[1] + "</li>")
-    // });
-    // numbers.forEach(function(number){
-    //   $("ul#result").append("<li>" + number + cards[2] + "</li>")
-    // });
-    // numbers.forEach(function(number){
-    //   $("ul#result").append("<li>" + number + cards[3] + "</li>")
-    // });
+
+    //This declares suitsChoice
     suitsChoice = $("#card-type").val();
-    
-    if (suitsChoice = "all-suits") {
+
+    //This starts the if statement
+    if (suitsChoice === "all-suits") {
       for (var index =0; index < cards.length; index++){
         numbers.forEach(function(number){
           $("ul#result").append("<li>" + number + cards[index] + "</li>");
         });
-      } else if (suitsChoice = "diamonds") {
-
-      } else if (suitsChoice = "hearts") {
-
-      } else if (suitsChoice = "spades") {
-
-      } else {
-
       };
+    } else if (suitsChoice === "diamonds") {
+      numbers.forEach(function(number){
+        $("ul#result").append("<li>" + number + cards[0] + "</li>")
+      });
+    } else if (suitsChoice === "hearts") {
+      numbers.forEach(function(number){
+        $("ul#result").append("<li>" + number + cards[1] + "</li>")
+      });
+    } else if (suitsChoice === "spades") {
+      numbers.forEach(function(number){
+        $("ul#result").append("<li>" + number + cards[2] + "</li>")
+      });
+    } else {
+      numbers.forEach(function(number){
+        $("ul#result").append("<li>" + number + cards[3] + "</li>")
 
+        console.log(cards[3]);
+      });
     };
-
   });
 });
